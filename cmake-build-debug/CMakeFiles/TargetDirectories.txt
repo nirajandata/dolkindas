@@ -1,3 +1,0 @@
-/home/nirarara/project/dolkindas/cmake-build-debug/CMakeFiles/dolkindas.dir
-/home/nirarara/project/dolkindas/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/nirarara/project/dolkindas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
