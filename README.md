@@ -4,3 +4,4 @@ rewriting my discord bot with c++
 
 ## Requirements:
 1. DPP library
+2. create `src/token.h` file and make a string variable named `TOKEN_ID` to store bot token id created from discord dev site.
