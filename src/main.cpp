@@ -1,13 +1,15 @@
 #include <dpp/dpp.h>
-
+#include "token.h"
 
 int main() {
+    /*
     std::ifstream env;
     std::string BOT_TOKEN;
     env.open(".env");
     env>>BOT_TOKEN;
     env.close();
-
+ */
+    const std::string BOT_TOKEN=TOKEN_ID;
 
     dpp::cluster bot(BOT_TOKEN);
 

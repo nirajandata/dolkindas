@@ -92,12 +92,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680608617776</updated>
-      <workItem from="1680608618775" duration="4543000" />
+      <workItem from="1680608618775" duration="7571000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VCPKGProject">
     <isAutomaticEditVcpkgJson value="false" />
