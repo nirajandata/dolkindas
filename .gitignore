@@ -1,5 +1,2 @@
-.env
-cmake-build-debug
-.idea
-a.out
+.env cmake-build-debug .idea t a.out
 
