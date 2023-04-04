@@ -10,7 +10,9 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="dolkindas" targetName="dolkindas" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -76,6 +78,11 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration name="dolkindas" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dolkindas" TARGET_NAME="dolkindas" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dolkindas" RUN_TARGET_NAME="dolkindas">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680608617776</updated>
-      <workItem from="1680608618775" duration="3225000" />
+      <workItem from="1680608618775" duration="4543000" />
     </task>
     <servers />
   </component>
