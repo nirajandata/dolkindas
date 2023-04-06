@@ -4,4 +4,8 @@ rewriting my discord bot with c++
 
 ## Requirements:
 1. DPP library
-2. create `src/token.h` file and make a string variable named `TOKEN_ID` to store bot token id created from discord dev site.
+2. Create `src/token.h` file and make a string variable named `ENV_TOKEn` to store bot token id created from discord dev site.
+3. In the same file, make an uint64_t variable with name `ENV_CId` to store the channel id for confession.
+
+## Features completed:
+1. Confessions
