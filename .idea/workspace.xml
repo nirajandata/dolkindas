@@ -10,9 +10,7 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated>
-      <config projectName="dolkindas" targetName="dolkindas" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -21,7 +19,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cde77e0-4c7f-4050-8c3f-47d346b39d4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +74,9 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="dolkindas" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dolkindas" TARGET_NAME="dolkindas" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dolkindas" RUN_TARGET_NAME="dolkindas">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -91,7 +90,7 @@
       <updated>1680608617776</updated>
       <workItem from="1680608618775" duration="12588000" />
       <workItem from="1680717730889" duration="7194000" />
-      <workItem from="1680784273335" duration="971000" />
+      <workItem from="1680784273335" duration="1018000" />
     </task>
     <servers />
   </component>
