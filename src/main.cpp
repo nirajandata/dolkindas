@@ -3,7 +3,7 @@
 
 int main() {
     /*
-    std::ifstream env;
+    stdifstream env;
     std::string BOT_TOKEN;
     env.open(".env");
     env>>BOT_TOKEN;
@@ -17,7 +17,8 @@ int main() {
     bot.on_log(dpp::utility::cout_logger());
 
     bot.on_message_create([&bot](const dpp::message_create_t & event) {
-        if (event.msg.channel_id== ENV_CID && event.msg.content.size()>0) {
+       std::cout <<event.msg.channel_id << std::endl;
+        if (event.msg.channel_id== ENV_CID && !event.msg.content.empty()) {
             dpp::embed embed = dpp::embed().
                     set_color(dpp::colors::sti_blue).
                     set_title("Confession").

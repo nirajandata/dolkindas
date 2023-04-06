@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(dolkindas VERSION 0.44 DESCRIPTION "meowindas")
+project(dolkindas VERSION 0.44 DESCRIPTION "a general purpose discord bot for meowkindas")
 
 
 add_executable(dolkindas
