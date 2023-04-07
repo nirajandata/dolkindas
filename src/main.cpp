@@ -22,7 +22,7 @@ int main() {
                     set_color(dpp::colors::sti_blue).
                     set_title("Confession").
                     set_description(event.msg.content).
-                    set_timestamp(time(0));
+                    set_timestamp(time(nullptr));
 
             bot.message_delete(event.msg.id,event.msg.channel_id);
             bot.message_create(dpp::message(event.msg.channel_id,embed));
