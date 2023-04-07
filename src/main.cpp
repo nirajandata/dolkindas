@@ -9,15 +9,14 @@ int main() {
     env>>BOT_TOKEN;
     env.close();
  */
-    const std::string BOT_TOKEN=ENV_TOKEN;
-//    const int64_t CID=ENV_CID;
-
-    dpp::cluster bot(BOT_TOKEN, dpp::i_default_intents | dpp::i_message_content);
+    dpp::cluster bot(ENV_TOKEN, dpp::i_default_intents | dpp::i_message_content);
 
     bot.on_log(dpp::utility::cout_logger());
 
+    bot.on_ready([&bot](const dpp::ready_t & event){
+        bot.set_presence(dpp::presence(dpp::ps_online ,dpp::at_listening,"Satlok Ashram Youtube Channel"));
+    });
     bot.on_message_create([&bot](const dpp::message_create_t & event) {
-       std::cout <<event.msg.channel_id << std::endl;
         if (event.msg.channel_id== ENV_CID && !event.msg.content.empty()) {
             dpp::embed embed = dpp::embed().
                     set_color(dpp::colors::sti_blue).
