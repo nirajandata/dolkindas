@@ -27,7 +27,17 @@ int main() {
             bot.message_delete(event.msg.id,event.msg.channel_id);
             bot.message_create(dpp::message(event.msg.channel_id,embed));
         }
+        else if((int)event.msg.content.find("!em")==0 && !event.msg.author.is_bot() && event.msg.content.size()>2) {
+            dpp::webhook wh(ENV_WEBHOOK);
+            std::string val=event.msg.content;
+            val.erase(0,3);
+            bot.execute_webhook(wh, dpp::message(val));
+            return 0;
+        }
+
     });
+
+
 
    bot.start(dpp::st_wait);
 }
