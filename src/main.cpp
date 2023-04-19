@@ -32,7 +32,7 @@ int main() {
             std::string val=event.msg.content;
             val.erase(0,3);
             bot.execute_webhook(wh, dpp::message(val));
-            return 0;
+            bot.message_delete(event.msg.id,event.msg.channel_id);
         }
 
     });
