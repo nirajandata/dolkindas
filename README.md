@@ -9,3 +9,4 @@ rewriting my discord bot with c++
 
 ## Features completed:
 1. Confessions
+2. NQN like custom emote feature
