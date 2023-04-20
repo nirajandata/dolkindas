@@ -29,6 +29,8 @@ int main() {
         }
         else if((int)event.msg.content.find("!em")==0 && !event.msg.author.is_bot() && event.msg.content.size()>2) {
             dpp::webhook wh(ENV_WEBHOOK);
+            wh.name=event.msg.author.username;
+            wh.avatar=event.msg.author.get_avatar_url();
             std::string val=event.msg.content;
             val.erase(0,3);
             bot.execute_webhook(wh, dpp::message(val));
