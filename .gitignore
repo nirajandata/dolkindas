@@ -1,5 +1,4 @@
-.env
+src/.env
 cmake-build-debug
 .idea
 *.out
-src/token.h
