@@ -2,7 +2,7 @@
 
 std::tuple<std::string, std::string> trim(std::string &line) {
     line.erase(std::remove(line.begin(), line.end(), ' '), line.end());
-    std::array<int, 4> locate;
+    std::array<int, 4> locate{};
     int count = 0;
     for (size_t i = 0; i < line.size(); i++) {
         if (line[i] == '\'' or line[i] == '"') {

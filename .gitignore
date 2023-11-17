@@ -2,3 +2,5 @@ src/.env
 cmake-build-debug
 .idea
 *.out
+*.sh
+
