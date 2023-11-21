@@ -9,7 +9,6 @@ int main() {
      //  std::system("ls -a");
 
     std::map<std::string, std::string> TOKENS = get_env_fromFile();
-    //TOKENS["BOT"]="MTA5Mjc1MjA2MDAxOTEzMDQwOQ.GD3iLk.hKU_RrRra1fFSLPiZz1LEvNBscSpDihxPg1Q4g";
     dpp::cluster bot(TOKENS["BOT"],
                      dpp::i_default_intents | dpp::i_message_content);
 
