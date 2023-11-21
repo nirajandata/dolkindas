@@ -1,6 +1,6 @@
-.env
 cmake-build-debug
 .idea
 *.out
 *.sh
+*.env
 include
