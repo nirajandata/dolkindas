@@ -1,20 +1,25 @@
-#include "../lib/commands.hpp"
-#include "../lib/getenv.hpp"
+#include "lib/commands.hpp"
+#include "lib/getenv.hpp"
 #include <dpp/dpp.h>
-// #include <cstdlib>
+//#include <cstdlib>
+#define FIRST_TIME true
 
 int main() {
 
-    //   std::system("ls ");
+     //  std::system("ls -a");
 
     std::map<std::string, std::string> TOKENS = get_env_fromFile();
-
+    //TOKENS["BOT"]="MTA5Mjc1MjA2MDAxOTEzMDQwOQ.GD3iLk.hKU_RrRra1fFSLPiZz1LEvNBscSpDihxPg1Q4g";
     dpp::cluster bot(TOKENS["BOT"],
                      dpp::i_default_intents | dpp::i_message_content);
 
     bot.on_log(dpp::utility::cout_logger());
 
     bot.on_ready([&bot](const dpp::ready_t &event) {
+
+        if(FIRST_TIME){
+            commands::slash_entry(bot);
+        }
         bot.set_presence(dpp::presence(dpp::ps_online, dpp::at_listening,
                                        "Satlok Ashram Youtube Channel"));
     });
@@ -65,4 +70,5 @@ int main() {
     });
 
     bot.start(dpp::st_wait);
+
 }
