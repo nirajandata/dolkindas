@@ -4,7 +4,11 @@ rewriting my discord bot with c++
 
 ## Requirements:
 1. DPP library
-2. Create a file named .env and write "BOT"="Your token name"
+2. Create a file named .env and write \
+   "BOT"="Your token name"
+   "CF_ID"="channel id for confession" \
+   "HOOK"="webhook of specific discord channel" \
+   "API"="https://latex.codecogs.com/png.image?\huge&space;\dpi{200}\bg{black}&space;" 
 
 ## Features completed:
 1. Confessions
