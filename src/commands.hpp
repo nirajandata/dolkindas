@@ -31,21 +31,20 @@ namespace commands {
         std::cout << d;
         return cc.body;
     }*/
-     void dog(dpp::cluster &client, const dpp::slashcommand_t &event);
-//       std::string dog_image="Error, not found";
-//      //  client.request("https://dog.ceo/api/breeds/image/random", dpp::m_get,test);
+    void latex(dpp::cluster &client,const dpp::slashcommand_t &event);
+    void dog(dpp::cluster &client, const dpp::slashcommand_t &event);
 //        dpp::http_request_completion_t result = co_await event.from->creator->co_request("https://dog.ceo/api/breeds/image/random", dpp::m_get);
-//        if(result.status==199){
-//         json data=json.parse(result.body);
-//         dog_image=data["message"];
-//         event.reply(dog_image);
-//        }
 
     inline void cat(dpp::cluster &client, const dpp::slashcommand_t &event) {
         event.reply("meow");
     }
     static std::map<std::string, cmdType> cmd = {
-            {"ping", {"A ping command", ping}}
+            {"ping", {"A ping command", ping}},
+            {"cat",{"meow meow ", cat}},
+            {"tex", {"latex command", latex, {
+                    {dpp::command_option(dpp::co_sub_command, "input", "Send a latex command.")},
+            }}
+            }
     };
 
     inline void slash_entry(dpp::cluster &bot) {
@@ -56,10 +55,14 @@ namespace commands {
                 temp.set_name(t.first).set_application_id(bot.me.id).set_description(
                         t.second.description);
                 temp.options = t.second.parameters;
-                // todo: std::move
                 allCmd.push_back(temp);
             }
             bot.global_bulk_command_create(allCmd);
+        }
+    }
+    inline void clear_commands(dpp::cluster &bot){
+        if (dpp::run_once<struct clear_bot_commands>()) {
+            bot.global_bulk_command_delete();
         }
     }
 }

@@ -14,6 +14,7 @@ target_sources(mod
 add_executable(dolkindas
         src/main.cpp
         src/commands.hpp
+        src/commands.cpp
 )
 
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
