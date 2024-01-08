@@ -47,13 +47,13 @@ int main() {
                    event.msg.content.size() > 2) {
 
             dpp::webhook wh(TOKENS.at("HOOK"));
-            wh.name = event.msg.author.username;
-            wh.load_image(event.msg.author.get_url(),dpp::i_webp);
+            //wh.name = event.msg.author.username;
+           // wh.load_image(event.msg.author.get_url(),dpp::i_webp);
             std::string val = event.msg.content;
             val.erase(0, 3);
 
             bot.execute_webhook(wh, dpp::message(val));
-//            bot.message_delete(event.msg.id, event.msg.channel_id);
+            bot.message_delete(event.msg.id, event.msg.channel_id);
 
         } else if (event.msg.content.find("$$") == 0 &&
                    event.msg.content.size() > 3) {
