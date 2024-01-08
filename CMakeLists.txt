@@ -9,25 +9,32 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/.env
 
 
 
-#TODO: Refracter this
-include(FetchContent)
-
+#include(FetchContent)
 #FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.11.2/json.tar.xz)
 #FetchContent_MakeAvailable(json)
 
+set(CMAKE_CXX_STANDARD 20)
+
+add_library(mod)
+target_sources(mod
+        PUBLIC
+        FILE_SET CXX_MODULES FILES
+        mod/getenv.cxx
+)
+
 
 add_executable(dolkindas
-        main.cpp
-        lib/getenv.cpp
-        lib/commands.hpp
+        src/main.cpp
+#        lib/commands.hpp
 )
-set(CMAKE_CXX_STANDARD 23)
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
 message(STATUS "C++ Compiler: ${CMAKE_CXX_COMPILER}")
 
 
-target_link_libraries(dolkindas PRIVATE dpp )
-target_compile_definitions(dolkindas PUBLIC DPP_CORO)
+target_link_libraries(dolkindas PUBLIC mod  )
+target_compile_definitions(dolkindas PUBLIC DPP_CORO FIRST_TIME)
+target_compile_features(dolkindas PUBLIC cxx_std_20)
+
 #target_link_libraries(dolkindas simdjson)
 #target_include_directories(dolkindas ${CMAKE_SOURCE_DIR}/include)
 
@@ -35,7 +42,6 @@ target_compile_definitions(dolkindas PUBLIC DPP_CORO)
 #file(STRINGS .env TOKENS)
 #add_definitions(-DTOKEN=${TOKENS})
 
-#set(CMAKE_CXX_EXTENSIONS OFF)
 set_target_properties(dolkindas PROPERTIES
         CXX_STANDARD_REQUIRED ON
 )

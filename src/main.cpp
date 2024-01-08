@@ -1,14 +1,13 @@
-#include "lib/commands.hpp"
-#include "lib/getenv.hpp"
-#include <dpp/dpp.h>
-//#include <cstdlib>
-#define FIRST_TIME true
+//#include "lib/commands.hpp"
+import modenv;
+
 
 int main() {
 
      //  std::system("ls -a");
 
-    std::map<std::string, std::string> TOKENS = get_env_fromFile();
+    auto TOKENS = env::get_env_fromFile();
+    /**
     dpp::cluster bot(TOKENS["BOT"],
                      dpp::i_default_intents | dpp::i_message_content);
 
@@ -35,7 +34,7 @@ int main() {
             return;
         }
 
-        if (event.msg.channel_id == TOKENS["CF_ID"] && !event.msg.content.empty()) {
+        if (event.msg.channel_id == 1093248426076020787 && !event.msg.content.empty()) {
             dpp::embed embed = dpp::embed()
                     .set_color(dpp::colors::sti_blue)
                     .set_title("Confession")
@@ -69,5 +68,6 @@ int main() {
     });
 
     bot.start(dpp::st_wait);
+     **/
 
 }

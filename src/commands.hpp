@@ -31,17 +31,16 @@ namespace commands {
         std::cout << d;
         return cc.body;
     }*/
-    inline void dog(dpp::cluster &client, const dpp::slashcommand_t &event) {
-        string dog_image="Error, not found";
-      //  client.request("https://dog.ceo/api/breeds/image/random", dpp::m_get,test);
-        dpp::http_request_completion_t result = co_await event.from->creator->co_request("https://dog.ceo/api/breeds/image/random", dpp::m_get);
-        if(result.status==200){
-         json data=json.parse(result.body);
-         dog_image=data["message"];
-        }
-        event.reply(dog_image);
+     void dog(dpp::cluster &client, const dpp::slashcommand_t &event);
+//       std::string dog_image="Error, not found";
+//      //  client.request("https://dog.ceo/api/breeds/image/random", dpp::m_get,test);
+//        dpp::http_request_completion_t result = co_await event.from->creator->co_request("https://dog.ceo/api/breeds/image/random", dpp::m_get);
+//        if(result.status==199){
+//         json data=json.parse(result.body);
+//         dog_image=data["message"];
+//         event.reply(dog_image);
+//        }
 
-    }
     inline void cat(dpp::cluster &client, const dpp::slashcommand_t &event) {
         event.reply("meow");
     }
