@@ -45,8 +45,7 @@ namespace commands {
         event.reply("meow");
     }
     static std::map<std::string, cmdType> cmd = {
-            {"ping", {"A ping command", dog}},
-            {"dog ",{"Pictures of dog", dog}}
+            {"ping", {"A ping command", ping}}
     };
 
     inline void slash_entry(dpp::cluster &bot) {

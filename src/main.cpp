@@ -1,13 +1,13 @@
-//#include "lib/commands.hpp"
+
 import modenv;
+#include "commands.hpp"
 
 
 int main() {
 
      //  std::system("ls -a");
 
-    auto TOKENS = env::get_env_fromFile();
-    /**
+    auto TOKENS = env::getenv();
     dpp::cluster bot(TOKENS["BOT"],
                      dpp::i_default_intents | dpp::i_message_content);
 
@@ -68,6 +68,5 @@ int main() {
     });
 
     bot.start(dpp::st_wait);
-     **/
 
 }
