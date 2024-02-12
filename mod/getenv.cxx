@@ -8,26 +8,27 @@ module;
 export module modenv;
 
 [[nodiscard]] auto trim(std::string &line) noexcept {
-    line.erase(std::remove(line.begin(), line.end(), ' '), line.end());
-    std::array<int, 4> locate;
-    size_t count = 0;
-    for (size_t i = 0; i < line.size(); i++) {
-        if (line[i] == '\'' || line[i] == '"') {
-            locate[count] = i + 1;
-            if (count & 1)
-                locate[count]--;
 
-            count++;
-        }
-    }
     std::string key, value;
-    key = line.substr(locate[0], locate[1] - locate[0]);
-    value = line.substr(locate[2], locate[3] - locate[2]);
+    size_t i=1;
+    for(int j=0; j<4; j++) {
+        while(i<line.size()-1 && line[i]!='"' && line[i]!='\'') {
+            if(line[i]=='=' || line[i]==' '){
+                i++;
+                continue;
+            }
+            value+=line[i];
+            i++;
+        }
+        if(j==1)
+            std::swap(key,value);
+        i++;
+    }
     return std::array<std::string, 2>{key, value};
 }
 
 export namespace env {
-    [[nodiscard]] auto getenv(std::string path = ".env") noexcept {
+    [[nodiscard]] std::map<std::string,std::string> getenv(std::string path = ".env") noexcept {
         std::ifstream file(path);
         // we store the key and value in dictionary called baniya
         std::map<std::string, std::string> baniya;

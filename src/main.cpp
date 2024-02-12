@@ -6,8 +6,9 @@ int main() {
 
      //  std::system("ls -a");
      auto TOKENS=env::getenv();
+
     constexpr bool DEBUG=false;
-    dpp::cluster bot(TOKENS["BOT"],
+    dpp::cluster bot(TOKENS.at("BOT"),
                      dpp::i_default_intents | dpp::i_message_content);
 
     bot.on_log(dpp::utility::cout_logger());
@@ -43,7 +44,7 @@ int main() {
             bot.message_delete(event.msg.id, event.msg.channel_id);
             bot.message_create(dpp::message(event.msg.channel_id, embed));
 
-        } else if (event.msg.content.find("!em") ==0 &&
+        } else if (event.msg.content.starts_with("!em")  &&
                    event.msg.content.size() > 2) {
 
             dpp::webhook wh(TOKENS.at("HOOK"));
@@ -55,11 +56,11 @@ int main() {
             bot.execute_webhook(wh, dpp::message(val));
             bot.message_delete(event.msg.id, event.msg.channel_id);
 
-        } else if (event.msg.content.find("$$") == 0 &&
+        } else if (event.msg.content.starts_with("$$")  &&
                    event.msg.content.size() > 3) {
             std::string latex_msg = event.msg.content;
             latex_msg.erase(0, 2);
-            latex_msg.erase(latex_msg.length() - 2);
+            latex_msg.erase(latex_msg.end() - 2,latex_msg.end());
             latex_msg.erase(std::remove(latex_msg.begin(), latex_msg.end(), ' '),
                             latex_msg.end());
             latex_msg = TOKENS.at("API") + latex_msg;
@@ -69,5 +70,4 @@ int main() {
     });
 
     bot.start(dpp::st_wait);
-
 }

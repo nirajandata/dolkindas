@@ -6,7 +6,6 @@
 #include <vector>
 #include <dpp/nlohmann/json.hpp>
 
-using json = nlohmann::json;
 
 // export module comamnds:slash;
 
@@ -40,11 +39,7 @@ namespace commands {
     }
     static std::map<std::string, cmdType> cmd = {
             {"ping", {"A ping command", ping}},
-            {"cat",{"meow meow ", cat}},
-            {"tex", {"latex command", latex, {
-                    {dpp::command_option(dpp::co_sub_command, "input", "Send a latex command.")},
-            }}
-            }
+            {"cat",{"meow meow ", cat}}
     };
 
     inline void slash_entry(dpp::cluster &bot) {
