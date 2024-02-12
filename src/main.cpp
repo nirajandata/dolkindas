@@ -34,6 +34,9 @@ int main() {
 
     bot.on_message_create([&bot, TOKENS](const dpp::message_create_t &event) {
 
+        if(event.msg.author.is_bot()){
+            return;
+        }
         if (event.msg.channel_id == dpp::snowflake(TOKENS.at("CF_ID"))){
             dpp::embed embed = dpp::embed()
                     .set_color(dpp::colors::sti_blue)
