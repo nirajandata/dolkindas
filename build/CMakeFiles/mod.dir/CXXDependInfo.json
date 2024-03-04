@@ -1,0 +1,30 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "Clang",
+	"compiler-simulate-id" : "",
+	"config" : "",
+	"cxx-modules" : 
+	{
+		"CMakeFiles/mod.dir/mod/getenv.cxx.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "CXX_MODULES",
+			"relative-directory" : "mod",
+			"source" : "/home/again/project/dolkindas/mod/getenv.cxx",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		}
+	},
+	"dir-cur-bld" : "/home/again/project/dolkindas/build",
+	"dir-cur-src" : "/home/again/project/dolkindas",
+	"dir-top-bld" : "/home/again/project/dolkindas/build",
+	"dir-top-src" : "/home/again/project/dolkindas",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/again/project/dolkindas/build/CMakeFiles/mod.dir"
+}

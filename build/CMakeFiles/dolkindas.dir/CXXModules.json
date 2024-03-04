@@ -1,0 +1,12 @@
+{
+	"modules" : {},
+	"references" : 
+	{
+		"modenv" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/mod.dir/modenv.pcm"
+		}
+	},
+	"usages" : {}
+}

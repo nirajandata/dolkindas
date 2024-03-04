@@ -1,0 +1,19 @@
+{
+	"modules" : 
+	{
+		"modenv" : 
+		{
+			"bmi" : "/home/again/project/dolkindas/build/CMakeFiles/mod.dir/modenv.pcm",
+			"is-private" : false
+		}
+	},
+	"references" : 
+	{
+		"modenv" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/mod.dir/modenv.pcm"
+		}
+	},
+	"usages" : {}
+}
