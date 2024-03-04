@@ -1,4 +1,0 @@
-/home/again/project/dolkindas/build/CMakeFiles/mod.dir
-/home/again/project/dolkindas/build/CMakeFiles/dolkindas.dir
-/home/again/project/dolkindas/build/CMakeFiles/edit_cache.dir
-/home/again/project/dolkindas/build/CMakeFiles/rebuild_cache.dir

@@ -1,9 +1,0 @@
-{
-  "revision": 0,
-  "rules": [
-    {
-      "primary-output": "CMakeFiles/dolkindas.dir/src/commands.cpp.o"
-    }
-  ],
-  "version": 1
-}

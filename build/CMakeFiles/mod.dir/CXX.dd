@@ -1,4 +1,0 @@
-ninja_dyndep_version = 1.0
-build CMakeFiles/mod.dir/mod/getenv.cxx.o | CMakeFiles/mod.dir/modenv.pcm: dyndep
-  restat = 1
-

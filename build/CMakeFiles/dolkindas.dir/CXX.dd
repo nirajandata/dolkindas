@@ -1,5 +1,0 @@
-ninja_dyndep_version = 1.0
-build CMakeFiles/dolkindas.dir/src/main.cpp.o: dyndep | CMakeFiles/mod.dir/modenv.pcm
-
-build CMakeFiles/dolkindas.dir/src/commands.cpp.o: dyndep
-
